@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Login with Registered Email
+Documentation    Login with Registered Credentials
 Metadata         ID                           630
 Metadata         Automation priority          1
 Metadata         Test case importance         High
@@ -10,14 +10,13 @@ Test Teardown    Test Teardown
 
 
 *** Test Cases ***
-Login with Registered Email
-    [Documentation]    Login with Registered Email
+Login with Registered Credentials
+    [Documentation]    Login with Registered Credentials
 
     &{dataset} =    Retrieve Dataset
 
     Given Andy is on Login Page
-    When Andy input "${dataset}[REGISTERED_EMAIL]" to username field
-    And Andy input "${dataset}[REGISTERED_PASSWORD]" to password field
+    When Andy is login using registered email "${dataset}[REGISTERED_EMAIL]" and password "${dataset}[REGISTERED_PASSWORD]"
     Then Andy is on OTP page
 
 
