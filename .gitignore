@@ -1,0 +1,21 @@
+# Ignore virtual environment
+venv/
+
+# Ignore Robot Framework output directories
+Results/
+__pycache__/
+
+# Ignore files generated during Robot Framework execution
+*.log
+*.html
+*.xml
+
+# Ignore IDE and editor-specific files
+.vscode/
+.idea/
+
+# Ignore Python-specific files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
