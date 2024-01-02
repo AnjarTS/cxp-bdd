@@ -18,6 +18,7 @@ Login with Registered Email
     Given Andy is on Login Page
     When Andy input "${dataset}[REGISTERED_EMAIL]" to username field
     And Andy input "${dataset}[REGISTERED_PASSWORD]" to password field
+    Then Andy is on OTP page
 
 
 *** Keywords ***
